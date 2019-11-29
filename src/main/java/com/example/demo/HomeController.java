@@ -22,6 +22,12 @@ public class HomeController {
         model.addAttribute("companys",companyRepository.findAll());
         return "index";
     }
+    @PostMapping("/searchlist")
+    public String SearchPage(Model model,@RequestParam("search") String search) {
+        model.addAttribute("companys",companyRepository.findByNameContainingIgnoreCase(search));
+
+        return "searchIndex";
+    }
 
     @GetMapping("/companyform")
     public String companyform(Model model){

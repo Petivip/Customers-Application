@@ -22,7 +22,13 @@
         <button type="submit" class="btn btn-primary" value="submit" onclick="myFunction()">Add Job</button>
     </div>
 </form>
-
+<br /><br /><br />
+<form th:action="@{/searchlist}" method="post">
+    <button class="src-btn" type="submit"><i class="ion-ios-search-strong"></i></button>
+    <label>
+        <input class="src-input" type="text" name="search" placeholder="Type of search">
+    </label>
+</form>
 
 
 </body>
