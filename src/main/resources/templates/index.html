@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home Page</title>
+
+</head>
+<body >
+
+<header >
+
+</header>
+
+<div class="slider"></div><!-- slider -->
+
+<section class="blog-area section">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6" th:each="company :${companys}" >
+                <div class="card h-100">
+
+
+
+
+
+                        <div class="blog-info">
+
+                            <h4 class="title" th:text="${company.name}"></h4>
+                            <p th:text="${company.id}"> </p>
+
+                        </div>
+
+
+                </div><!-- card -->
+            </div><!-- col-lg-4 col-md-6 -->
+
+
+        </div><!-- row -->
+
+
+
+    </div><!-- container -->
+</section><!-- section -->
+
+
+
+</body>
+</html>

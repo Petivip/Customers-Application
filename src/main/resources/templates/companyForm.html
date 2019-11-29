@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Company Form</title>
+
+</head>
+<body  >
+
+<form action="#" th:action="@{/companyform}" th:object="${company}" method="POST" >
+    <div class="form-group " >
+        <input type="hidden"   th:field="*{id}">
+
+    </div>
+    <div class="form-group " >
+        <label for="exampleFormControlInput1">Name :</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Job title" th:field="*{name}">
+        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+    </div>
+
+    <div class="form-btn">
+        <button type="submit" class="btn btn-primary" value="submit" onclick="myFunction()">Add Job</button>
+    </div>
+</form>
+
+
+
+</body>
+</html>
